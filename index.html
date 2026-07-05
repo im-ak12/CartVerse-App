@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartVerse - Shop Beyond Limits</title>
+    
+    <!-- Meta SEO Headers -->
+    <meta name="description" content="Welcome to CartVerse - India's premium shopping portal featuring mega electronics sales, fashion apparel, home decors, and professional gaming gear.">
+    <meta name="keywords" content="CartVerse, Flipkart Replica, Amazon India, Online Shopping, Electronics, Mobiles, Clothing">
+    <meta name="author" content="Alok Kumar">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- External Typography & Icon Frameworks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- --- 1. Site Loading Screen --- -->
+    <div id="loader">
+        <div class="loader-content">
+            <i class="fa-solid fa-cart-shopping loader-icon"></i>
+            <h1>CartVerse</h1>
+            <p>Shop Beyond Limits</p>
+        </div>
+    </div>
+
+    <!-- --- 2. Mega-Header (Amazon/Flipkart inspired navigation) --- -->
+    <header class="main-header">
+        <div class="top-nav">
+            <!-- Brand Logo -->
+            <div class="logo-area" id="logoBtn">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-brand">CartVerse</span>
+                    <span class="logo-subtitle">Shop Beyond Limits</span>
+                </div>
+            </div>
+
+            <!-- Delivery Location Pin (Amazon style) -->
+            <div class="delivery-pin" id="deliveryPinBtn">
+                <i class="fa-solid fa-location-dot pin-icon"></i>
+                <div class="pin-text">
+                    <span class="pin-line1" id="pinRecipient">Deliver to Alok Kumar</span>
+                    <span class="pin-line2" id="pinLocation">Hyderabad 500081</span>
+                </div>
+            </div>
+
+            <!-- Search Area (Amazon/Flipkart style) -->
+            <div class="search-container">
+                <div class="search-input-box">
+                    <input type="text" id="searchInput" placeholder="Search for products, brands and more">
+                    <button class="clear-search-btn" id="clearSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <button class="search-submit-btn" id="searchSubmitBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Nav Icons Actions (Cart/Wishlist/Account) -->
+            <div class="header-actions">
+                <!-- User Profile / Login dropdown -->
+                <div class="nav-action-item user-profile-trigger" id="userMenuBtn">
+                    <i class="fa-regular fa-user action-icon"></i>
+                    <div class="action-text">
+                        <span class="action-line1">Hello, Sign In</span>
+                        <span class="action-line2">Account & Lists <i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                </div>
+
+                <!-- Wishlist Heart Trigger -->
+                <div class="nav-action-item" id="wishlistToggleBtn">
+                    <div class="badge-wrapper">
+                        <i class="fa-regular fa-heart action-icon"></i>
+                        <span class="badge" id="wishlistCount">0</span>
+                    </div>
+                    <span class="action-label">Wishlist</span>
+                </div>
+
+                <!-- Shopping Cart Trigger -->
+                <div class="nav-action-item cart-action-btn" id="cartToggleBtn">
+                    <div class="badge-wrapper">
+                        <i class="fa-solid fa-cart-shopping action-icon"></i>
+                        <span class="badge cart-badge-color" id="cartCount">0</span>
+                    </div>
+                    <span class="action-label">Cart</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Scroll Strip (Flipkart sub-header style) -->
+        <div class="sub-nav">
+            <div class="category-strip" id="categoryStrip">
+                <button class="strip-item active" data-category="all">
+                    <i class="fa-solid fa-border-all"></i> All Products
+                </button>
+                <button class="strip-item" data-category="electronics">
+                    <i class="fa-solid fa-mobile-screen"></i> Mobiles & Tech
+                </button>
+                <button class="strip-item" data-category="fashion">
+                    <i class="fa-solid fa-shirt"></i> Fashion & Apparel
+                </button>
+                <button class="strip-item" data-category="gaming">
+                    <i class="fa-solid fa-gamepad"></i> Gaming Hub
+                </button>
+                <button class="strip-item" data-category="home">
+                    <i class="fa-solid fa-couch"></i> Home & Living
+                </button>
+                <button class="strip-item" data-category="accessories">
+                    <i class="fa-solid fa-glasses"></i> Accessories
+                </button>
+            </div>
+            
+            <div class="theme-switch-box">
+                <button id="themeToggleBtn" class="theme-btn" title="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <!-- --- 3. Hero Promotional Carousel Banner (Flipkart Style) --- -->
+        <section class="promo-carousel-container">
+            <div class="carousel" id="promoCarousel">
+                <div class="carousel-slide active" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('https://picsum.photos/id/48/1200/600');">
+                    <div class="slide-content">
+                        <span class="deal-tag">Flipkart & Amazon Mega Deal Day</span>
+                        <h2>Mega Electronics Carnival</h2>
+                        <p>Up to 70% Off on Top brands, Laptops, Mobile Phones & Soundbars. No Cost EMI available.</p>
+                        <button class="shop-now-btn scroll-to-catalog">Shop The Sale <i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('https://picsum.photos/id/103/1200/600');">
+                    <div class="slide-content">
+                        <span class="deal-tag">Myntra & Ajio Special Collection</span>
+                        <h2>Fashion Wardrobe Refresh</h2>
+                        <p>Minimum 50% Off on Premium apparel, active sports footwear, and designer backpacks.</p>
+                        <button class="shop-now-btn scroll-to-catalog">Shop Fashion <i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('https://picsum.photos/id/1068/1200/600');">
+                    <div class="slide-content">
+                        <span class="deal-tag">Home Essentials Bonanza</span>
+                        <h2>Revamp Your Home In Style</h2>
+                        <p>Up to 60% Off on Smart Lighting, Espresso Machines, Furniture, and Organizer Accessories.</p>
+                        <button class="shop-now-btn scroll-to-catalog">Shop Home Essentials <i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Arrows -->
+            <button class="carousel-arrow prev" id="carouselPrevBtn"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="carousel-arrow next" id="carouselNextBtn"><i class="fa-solid fa-angle-right"></i></button>
+            
+            <!-- Carousel Dots -->
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- --- 4. Main Shop catalog Workspace (Sidebar + Grid) --- -->
+        <div class="shop-workspace" id="shopCatalog">
+            
+            <!-- Sidebar Filters (Myntra/Ajio style) -->
+            <aside class="sidebar-filters">
+                <div class="filter-card">
+                    <div class="filter-card-header">
+                        <h3>Filters</h3>
+                        <button class="clear-all-filters-btn" id="clearAllFiltersBtn">Clear All</button>
+                    </div>
+                    <hr>
+                    
+                    <!-- Search inside Sidebar -->
+                    <div class="filter-group">
+                        <h4>Search within Catalog</h4>
+                        <div class="sidebar-search-box">
+                            <input type="text" id="sidebarSearch" placeholder="Type query...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <h4>Price Limit</h4>
+                        <div class="price-slider-wrapper">
+                            <input type="range" id="priceRange" min="500" max="100000" step="500" value="100000">
+                            <div class="price-labels">
+                                <span>Min: ₹500</span>
+                                <span id="priceLimitVal" class="limit-val">Max: ₹100,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Minimum Star Ratings Filter -->
+                    <div class="filter-group">
+                        <h4>Minimum Rating</h4>
+                        <div class="rating-checkboxes">
+                            <label class="rating-checkbox-label">
+                                <input type="radio" name="ratingFilter" value="0" checked>
+                                <span>All Ratings</span>
+                            </label>
+                            <label class="rating-checkbox-label">
+                                <input type="radio" name="ratingFilter" value="4.5">
+                                <span class="stars-gold"><i class="fa-solid fa-star"></i> 4.5 ★ & Above</span>
+                            </label>
+                            <label class="rating-checkbox-label">
+                                <input type="radio" name="ratingFilter" value="4.0">
+                                <span class="stars-gold"><i class="fa-solid fa-star"></i> 4.0 ★ & Above</span>
+                            </label>
+                            <label class="rating-checkbox-label">
+                                <input type="radio" name="ratingFilter" value="3.5">
+                                <span class="stars-gold"><i class="fa-solid fa-star"></i> 3.5 ★ & Above</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Departments/Categories Selection Checkboxes -->
+                    <div class="filter-group">
+                        <h4>Departments</h4>
+                        <div class="category-checkboxes" id="categoryCheckboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="electronics" class="dept-checkbox" checked>
+                                <span>Mobiles & Tech</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="fashion" class="dept-checkbox" checked>
+                                <span>Fashion & Apparel</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="gaming" class="dept-checkbox" checked>
+                                <span>Gaming Hub</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="home" class="dept-checkbox" checked>
+                                <span>Home & Living</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="accessories" class="dept-checkbox" checked>
+                                <span>Accessories</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid Area (Flipkart style) -->
+            <section class="main-catalog-area">
+                <!-- Sorting & Top Headers -->
+                <div class="catalog-top-header">
+                    <div class="catalog-counts">
+                        <h2 id="catalogHeading">All Products</h2>
+                        <span class="count-tag" id="resultsCount">Showing 100 Products</span>
+                    </div>
+                    
+                    <div class="sort-wrapper">
+                        <label for="sortSelect">Sort By: </label>
+                        <select id="sortSelect">
+                            <option value="featured">Featured Picks</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Customer Ratings</option>
+                            <option value="alphabetical">A-Z Name Listing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Interactive Filters Pills Row -->
+                <div class="active-pills-row" id="activePillsRow">
+                    <!-- Javascript will inject pills here based on active selections -->
+                </div>
+
+                <!-- Products Grid -->
+                <div class="product-catalog-grid" id="productCatalogGrid">
+                    <!-- 100 Dynamic Products injected via script.js -->
+                </div>
+
+                <!-- Interactive Pagination (Pages 1, 2, 3, 4, 5) -->
+                <div class="pagination-container" id="paginationContainer">
+                    <!-- JS will inject working numbers: Prev, 1, 2, 3, 4, 5, Next -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- --- 5. Sliding Shopping Cart Drawer Overlay --- -->
+    <div class="drawer-overlay" id="cartOverlay">
+        <div class="drawer-panel">
+            <div class="drawer-header">
+                <h3><i class="fa-solid fa-cart-shopping drawer-icon-cyan"></i> Shopping Cart</h3>
+                <button class="drawer-close-btn" id="cartCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="drawer-body" id="cartItemsList">
+                <!-- Dynamic cart list items -->
+            </div>
+            
+            <div class="drawer-footer">
+                <div class="subtotal-row">
+                    <span>Estimated Subtotal:</span>
+                    <span class="subtotal-amount" id="cartSubtotal">₹0</span>
+                </div>
+                <button class="btn-checkout" id="checkoutBtn">
+                    <span>Proceed to Checkout</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="btn-clear-cart" id="clearCartBtn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- 6. Sliding Wishlist Drawer Overlay --- -->
+    <div class="drawer-overlay" id="wishlistOverlay">
+        <div class="drawer-panel">
+            <div class="drawer-header">
+                <h3><i class="fa-solid fa-heart drawer-icon-rose"></i> My Wishlist</h3>
+                <button class="drawer-close-btn" id="wishlistCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="drawer-body" id="wishlistItemsList">
+                <!-- Dynamic wishlist items -->
+            </div>
+            
+            <div class="drawer-footer">
+                <button class="btn-wishlist-cart" id="addAllWishlistToCartBtn">
+                    <span>Add All to Cart</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- 7. Product Quick View Modal Dialog --- -->
+    <div class="modal-overlay" id="quickViewOverlay">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="qvCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="quickview-grid" id="qvModalContent">
+                <!-- Dynamic Quick View modal details generated by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- --- 7.5 Set Delivery Location Modal Dialog --- -->
+    <div class="modal-overlay" id="locationOverlay">
+        <div class="modal-card auth-card" style="max-width: 450px;">
+            <button class="modal-close-btn" id="locCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="auth-panel active" style="padding: 10px 5px;">
+                <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                    <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan);"></i> Set Delivery Location
+                </h3>
+                <p style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted);">
+                    Select where you would like your orders to be processed and shipped.
+                </p>
+                <form class="auth-form" id="locationForm" onsubmit="event.preventDefault();">
+                    <div class="form-control">
+                        <label for="locName">Recipient Name</label>
+                        <input type="text" id="locName" placeholder="e.g. Alok Kumar" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="locStreet">Street/Door Address</label>
+                        <input type="text" id="locStreet" placeholder="e.g. Room 402, Cyber Heights Apartments" required>
+                    </div>
+                    <div class="row-controls" style="display: flex; gap: 15px;">
+                        <div class="form-control" style="flex: 1;">
+                            <label for="locCity">City</label>
+                            <input type="text" id="locCity" placeholder="e.g. Hyderabad" required>
+                        </div>
+                        <div class="form-control" style="flex: 1;">
+                            <label for="locPincode">Pincode</label>
+                            <input type="text" id="locPincode" placeholder="e.g. 500081" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit-btn" id="locationSubmitBtn" style="margin-top: 15px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); color: #fff;">
+                        Save Location & Update Pin
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- 8. Authentication Popups (Login/Register Forms) --- -->
+    <div class="modal-overlay" id="authOverlay">
+        <div class="auth-card">
+            <button class="modal-close-btn" id="authCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            
+            <!-- Tab Headers -->
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" id="tabLoginBtn">Login</button>
+                <button class="auth-tab-btn" id="tabRegisterBtn">Register</button>
+            </div>
+            
+            <!-- Login Panel Form -->
+            <div class="auth-panel active" id="loginPanel">
+                <h3>Log in to CartVerse</h3>
+                <p>Welcome back! Please credentials to authenticate.</p>
+                <form class="auth-form" id="loginForm" onsubmit="event.preventDefault();">
+                    <div class="form-control">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="e.g. alok.kumar@csm-a.edu" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="loginPass">Password</label>
+                        <input type="password" id="loginPass" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-submit-btn" id="loginSubmitBtn">Access Account</button>
+                </form>
+            </div>
+            
+            <!-- Register Panel Form -->
+            <div class="auth-panel" id="registerPanel">
+                <h3>Create Free Account</h3>
+                <p>Register to unlock premium tracking details and flash sales.</p>
+                <form class="auth-form" id="registerForm" onsubmit="event.preventDefault();">
+                    <div class="form-control">
+                        <label for="regName">Full Name</label>
+                        <input type="text" id="regName" placeholder="e.g. Alok Kumar" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" placeholder="e.g. alok.kumar@csm-a.edu" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="regStreet">Street Address</label>
+                        <input type="text" id="regStreet" placeholder="e.g. Room 402, Cyber Heights" required>
+                    </div>
+                    <div class="row-controls" style="display: flex; gap: 15px; margin-bottom: 0;">
+                        <div class="form-control" style="flex: 1;">
+                            <label for="regCity">City</label>
+                            <input type="text" id="regCity" placeholder="e.g. Hyderabad" required>
+                        </div>
+                        <div class="form-control" style="flex: 1;">
+                            <label for="regPincode">Pincode</label>
+                            <input type="text" id="regPincode" placeholder="e.g. 500081" required>
+                        </div>
+                    </div>
+                    <div class="row-controls" style="display: flex; gap: 15px; margin-bottom: 0;">
+                        <div class="form-control" style="flex: 1;">
+                            <label for="regPass">Create Password</label>
+                            <input type="password" id="regPass" placeholder="Min 6 chars" required minlength="6">
+                        </div>
+                        <div class="form-control" style="flex: 1;">
+                            <label for="regConfirm">Confirm Password</label>
+                            <input type="password" id="regConfirm" placeholder="••••••••" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit-btn" id="registerSubmitBtn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- 9. Checkout & Payment Gateway Simulator --- -->
+    <div class="modal-overlay" id="checkoutOverlay">
+        <div class="modal-card checkout-modal-card">
+            <button class="modal-close-btn" id="checkoutCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="checkout-wrapper">
+                
+                <!-- Steps Progress Bar -->
+                <div class="checkout-progress">
+                    <span class="prog-step active" id="progStep1">1. Shipping</span>
+                    <span class="prog-step" id="progStep2">2. Payment</span>
+                    <span class="prog-step" id="progStep3">3. Receipt</span>
+                </div>
+
+                <!-- Checkout Step 1: Shipping Addresses Details -->
+                <div class="checkout-step-panel active" id="checkoutStepPanel1">
+                    <h3>Delivery Addresses Details</h3>
+                    <p class="section-desc">Please complete the delivery details below.</p>
+                    
+                    <form class="checkout-form" id="checkoutFormStep1" onsubmit="event.preventDefault();">
+                        <div class="row-controls">
+                            <div class="form-control">
+                                <label for="coName">Full Name</label>
+                                <input type="text" id="coName" value="Alok Kumar" required>
+                            </div>
+                            <div class="form-control">
+                                <label for="coPhone">Phone Number</label>
+                                <input type="text" id="coPhone" value="9876543210" required>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="coStreet">Street Address</label>
+                            <input type="text" id="coStreet" placeholder="Room 402, Cyber Heights Apartments" required>
+                        </div>
+                        <div class="row-controls">
+                            <div class="form-control">
+                                <label for="coCity">City</label>
+                                <input type="text" id="coCity" value="Hyderabad" required>
+                            </div>
+                            <div class="form-control">
+                                <label for="coPincode">Pincode</label>
+                                <input type="text" id="coPincode" value="500081" required>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-pricing-summary">
+                            <div class="summary-line">
+                                <span>Cart Value</span>
+                                <span id="coSubtotal">₹0</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Delivery Fee</span>
+                                <span class="delivery-free-color">FREE</span>
+                            </div>
+                            <hr>
+                            <div class="summary-line total-highlight">
+                                <span>Final Order Total</span>
+                                <span id="coTotal">₹0</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-checkout-next">Proceed to Secure Payment</button>
+                    </form>
+                </div>
+
+                <!-- Checkout Step 2: Payment Gateway Card Sandbox -->
+                <div class="checkout-step-panel" id="checkoutStepPanel2">
+                    <h3>Simulated Secure Payment</h3>
+                    <p class="section-desc">Test Credit/Debit card authorization pipeline synced via AWS sandbox.</p>
+                    
+                    <form class="checkout-form" id="checkoutFormStep2" onsubmit="event.preventDefault();">
+                        <div class="form-control">
+                            <label for="coCardNumber">Credit Card Number</label>
+                            <input type="text" id="coCardNumber" placeholder="4111 2222 3333 4444" required pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}">
+                        </div>
+                        <div class="row-controls">
+                            <div class="form-control">
+                                <label for="coCardExpiry">Expiry Date</label>
+                                <input type="text" id="coCardExpiry" placeholder="MM/YY" required pattern="\d{2}/\d{2}">
+                            </div>
+                            <div class="form-control">
+                                <label for="coCardCvv">CVV Code</label>
+                                <input type="password" id="coCardCvv" placeholder="***" required pattern="\d{3}">
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-pricing-summary">
+                            <div class="summary-line total-highlight">
+                                <span>Authorized Charge</span>
+                                <span id="coPayTotal">₹0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-action-btns">
+                            <button type="button" class="btn-payment-back" id="btnPaymentBack">Back</button>
+                            <button type="submit" class="btn-payment-authorize" id="btnPaymentAuthorize">Authorize Transaction</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Checkout Step 3: Success Invoice Invoice print -->
+                <div class="checkout-step-panel" id="checkoutStepPanel3">
+                    <div class="checkout-success-body">
+                        <div class="success-ring">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3>Order Successfully Placed!</h3>
+                        <p class="success-subtitle">Your sandbox transaction has been securely processed and routed from the AWS edge network.</p>
+                        
+                        <div class="invoice-box">
+                            <div class="invoice-title">
+                                <span>TAX INVOICE</span>
+                                <span class="invoice-num" id="invoiceId">AWS-CV-7819-2026</span>
+                            </div>
+                            <hr>
+                            <div class="invoice-details">
+                                <div class="invoice-line"><strong>Developer Name:</strong> <span>Alok Kumar</span></div>
+                                <div class="invoice-line"><strong>Roll Number:</strong> <span>23E51A6606</span></div>
+                                <div class="invoice-line"><strong>Academic Branch:</strong> <span>CSM-A</span></div>
+                                <div class="invoice-line"><strong>Server Host:</strong> <span class="server-active-color">AWS EC2 Linux / Apache</span></div>
+                                <div class="invoice-line"><strong>Shipped To:</strong> <span id="invoiceRecipient">Alok Kumar</span></div>
+                                <div class="invoice-line"><strong>Shipping Address:</strong> <span id="invoiceAddress">Room 402, Cyber Heights Apartments, Hyderabad 500081</span></div>
+                                <div class="invoice-line"><strong>Invoice Date:</strong> <span id="invoiceDate">29/05/2026</span></div>
+                                <hr>
+                                <div class="invoice-line total-line"><strong>Grand Total:</strong> <span id="invoiceTotal">₹0</span></div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-checkout-finish" id="btnCheckoutFinish">Return to Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- 10. Floating toast message --- -->
+    <div id="toastNotification">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toastText">Item successfully modified!</span>
+    </div>
+
+    <!-- --- 11. Custom Back to Top button --- -->
+    <button id="backToTopBtn" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- --- 12. Newsletter Section (Meesho/Snapdeal style footer entry) --- -->
+    <section class="newsletter-strip">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Join the CartVerse Elite Circle</h2>
+                <p>Subscribe to receive flash discount warnings, prime coupons, and AWS tech releases.</p>
+            </div>
+            <div class="newsletter-action">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address">
+                <button id="newsletterSubscribeBtn">Subscribe Now <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- 13. Footer Area (Exact Flipkart structure with CartVerse custom branding) --- -->
+    <footer class="footer-area">
+        <div class="footer-top-grid">
+            <div class="footer-col">
+                <h4>ABOUT</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">CartVerse Stories</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>GROUP COMPANIES</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Myntra</a></li>
+                    <li><a href="#">Cleartrip</a></li>
+                    <li><a href="#">Shopsy</a></li>
+                    <li><a href="#">Ajio Hub</a></li>
+                    <li><a href="#">Meesho Market</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">FAQ & Support</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONSUMER POLICY</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Security Safeguards</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Sitemap Directory</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                    <li><a href="#">EPR Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-border"></div>
+            <div class="footer-col address-col">
+                <h4>Mail Us:</h4>
+                <p class="address-text">
+                    CartVerse Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India
+                </p>
+                <div class="footer-social-links">
+                    <span class="social-label">Follow Us:</span>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col address-col">
+                <h4>Registered Office Address:</h4>
+                <p class="address-text">
+                    CartVerse Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India<br>
+                    CIN: U51109KA2012PTC066107<br>
+                    Telephone: <a href="tel:044-45614700">044-45614700</a> / <a href="tel:044-67415800">044-67415800</a>
+                </p>
+            </div>
+        </div>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-links">
+                <a href="#"><i class="fa-solid fa-store-slash"></i> Become a Seller</a>
+                <a href="#"><i class="fa-solid fa-circle-nodes"></i> Advertise</a>
+                <a href="#"><i class="fa-solid fa-gift"></i> Gift Cards</a>
+                <a href="#"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+            </div>
+            
+            <div class="footer-caption-branding">
+                <strong>CartVerse - Shop Beyond Limits</strong>
+            </div>
+
+            <div class="footer-copyright">
+                <span>&copy; 2007-2026 CartVerse.com | Academic Project for AWS Host</span>
+            </div>
+
+            <div class="footer-payments-icons">
+                <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                <img src="https://img.icons8.com/color/48/maestro.png" alt="Maestro">
+                <img src="https://img.icons8.com/color/48/rupay.png" alt="RuPay">
+                <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Dynamic Interaction Script -->
+    <script src="script.js"></script>
+</body>
+</html>
